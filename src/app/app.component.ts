@@ -7,4 +7,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'my-first-app';
+  loading = true;
+
+  constructor() {
+    this.loadModule();
+  }
+
+  loadModule() {
+    setTimeout(() => {
+      this.loading = false;
+    }, 5000); // Simulating async loading
+  }
 }
